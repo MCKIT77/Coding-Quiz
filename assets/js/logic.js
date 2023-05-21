@@ -76,7 +76,7 @@ function questionClick(event) {
   // check if user guessed wrong
   if (buttonEl.value !== currentQuestion.answer) {
 
-
+    feedbackEl.removeAttribute('class', 'hide');
     feedbackEl.textContent = "Incorrect!";
     feedbackEl.style.backgroundColor = "red";
     incorrectSound.play();
@@ -97,6 +97,7 @@ function questionClick(event) {
     // ...
 
     // flash right/wrong feedback on page for half a second
+    feedbackEl.removeAttribute('class', 'hide');
     feedbackEl.textContent = "Correct!";
     feedbackEl.style.color = "green";
     correctAnswers++;
