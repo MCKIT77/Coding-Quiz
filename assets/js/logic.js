@@ -78,7 +78,7 @@ function questionClick(event) {
 
     feedbackEl.removeAttribute('class', 'hide');
     feedbackEl.textContent = "Incorrect!";
-    feedbackEl.style.backgroundColor = "red";
+    feedbackEl.style.color = "red";
     incorrectSound.play();
     currentQuestionIndex++;
     time -= 15; // Adjust the value as needed
@@ -104,7 +104,7 @@ function questionClick(event) {
     correctSound.play();
 
     setTimeout(function () {
-      feedbackEl.textContent = "";
+      feedbackEl.textContent = "Out of Time!";
     }, 500);
 
     // Move to next question
