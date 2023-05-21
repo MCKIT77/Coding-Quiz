@@ -81,6 +81,10 @@ function questionClick(event) {
     feedbackEl.style.backgroundColor = "red";
     incorrectSound.play();
     currentQuestionIndex++;
+    time -= 15; // Adjust the value as needed
+    if (time < 0) {
+      time = 0; // Ensure time does not go negative
+    }
     if (currentQuestionIndex < questions.length) {
       getQuestion();
     } else {
@@ -97,10 +101,7 @@ function questionClick(event) {
     feedbackEl.style.color = "green";
     correctAnswers++;
     correctSound.play();
-    time -= 15; // Adjust the value as needed
-    if (time < 0) {
-      time = 0; // Ensure time does not go negative
-    }
+
     setTimeout(function () {
       feedbackEl.textContent = "";
     }, 500);
