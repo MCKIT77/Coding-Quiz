@@ -77,10 +77,13 @@ function questionClick(event) {
   if (buttonEl.value !== currentQuestion.answer) {
 
     feedbackEl.removeAttribute('class', 'hide');
-    feedbackEl.textContent = "Incorrect!";
+    feedbackEl.textContent = "Incorrect! -15 Seconds";
     feedbackEl.style.color = "red";
     incorrectSound.play();
     currentQuestionIndex++;
+    setTimeout(function () {
+      feedbackEl.textContent = "";
+    }, 500);
     time -= 15; // Adjust the value as needed
     if (time < 0) {
       time = 0; // Ensure time does not go negative
@@ -104,7 +107,7 @@ function questionClick(event) {
     correctSound.play();
 
     setTimeout(function () {
-      feedbackEl.textContent = "Out of Time!";
+      feedbackEl.textContent = "";
     }, 500);
 
     // Move to next question
