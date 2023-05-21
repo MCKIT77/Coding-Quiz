@@ -173,7 +173,7 @@ function saveHighscore() {
     window.localStorage.setItem('highscores', JSON.stringify(highscores));
 
     // redirect to next page
-    window.location.href = 'highscores.html';
+    window.location.href = 'https://mckit77.github.io/coding-quiz/highscores.html';
   }
 }
 
