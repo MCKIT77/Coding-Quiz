@@ -13,6 +13,6 @@ view the github page here: https://mckit77.github.io/coding-quiz/
 view the github repo here: https://github.com/MCKIT77/coding-quiz
 
 ## What Quiz Looks Like
-![Start-Page](assets/images/Done-Page.png)
+![Start-Page](assets/images/Start-Page.png)
 ![Done-Page](assets/images/Done-Page.png)
 ![Highscores-Page](assets/images/Highscores-Page.png)
